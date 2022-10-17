@@ -57,3 +57,21 @@ modprobe -r rpcrdma
 
 systemctl enable openibd
 systemctl start openibd
+
+
+# zypper install --no-confirm     rpm-build     insserv-compat     patch     make     python3-devel     tk     expat     createrepo_c
+# zypper in -y kernel-source-azure-5.3.18-150300.38.53.1 kernel-syms-azure-5.3.18-150300.38.53.1
+# zypper --ignore-unknown remove --no-confirm     librdmacm1     srp_daemon     rdma-core-devel
+# ./mlnxofedinstall --add-kernel-support
+
+# Note: This program will create MLNX_OFED_LINUX TGZ for sles15sp3 under /tmp/MLNX_OFED_LINUX-5.6-2.0.9.0-5.3.18-150300.38.53-azure directory.
+# See log file /tmp/MLNX_OFED_LINUX-5.6-2.0.9.0-5.3.18-150300.38.53-azure/mlnx_iso.6571_logs/mlnx_ofed_iso.6571.log
+
+# Checking if all needed packages are installed...
+# Detected sles15sp3 x86_64. Disabling buidling 32bit rpms...
+
+# Error: One or more required packages for installing OFED-internal are missing.
+# Please install the missing packages using your Linux distribution Package Management tool.
+# Run:
+# zypper install kernel-source
+# Failed to build MLNX_OFED_LINUX for 5.3.18-150300.38.53-azure
